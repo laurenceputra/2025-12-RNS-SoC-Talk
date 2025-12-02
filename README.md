@@ -22,7 +22,7 @@ A reveal.js presentation for Returning NSMen Talk at NUS School of Computing.
 
 ## GitHub Pages Hosting
 
-This repository includes the `node_modules` directory to support hosting the presentation directly on GitHub Pages without a build step. The reveal.js dependencies are bundled in the repository so that `index.html` can reference them directly via relative paths.
+This repository includes only the necessary reveal.js files in the `vendor/` directory to support hosting the presentation directly on GitHub Pages without a build step. The required CSS and JavaScript files are bundled in the repository so that `index.html` can reference them directly via relative paths.
 
 To host on GitHub Pages:
 1. Enable GitHub Pages in your repository settings
@@ -65,7 +65,7 @@ Alternatively, you can simply open `index.html` directly in your browser, though
 To change the presentation theme, modify the theme CSS link in `index.html`:
 
 ```html
-<link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css">
+<link rel="stylesheet" href="vendor/reveal.js/dist/theme/black.css">
 ```
 
 Available themes include: `black`, `white`, `league`, `beige`, `sky`, `night`, `serif`, `simple`, `solarized`, `blood`, `moon`.
