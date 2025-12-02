@@ -1,0 +1,24 @@
+{
+  "name": "2025-12-rns-soc-talk",
+  "version": "1.0.0",
+  "description": "Talk for Returning NSMen for NUS SoC",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "reveal.js",
+    "presentation",
+    "nus",
+    "soc"
+  ],
+  "author": "NUS SoC",
+  "license": "MIT",
+  "dependencies": {
+    "reveal.js": "^5.2.1"
+  },
+  "devDependencies": {
+    "serve": "^14.2.5"
+  }
+}
