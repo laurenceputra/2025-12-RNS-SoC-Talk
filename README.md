@@ -20,6 +20,15 @@ A reveal.js presentation for Returning NSMen Talk at NUS School of Computing.
    npm install
    ```
 
+## GitHub Pages Hosting
+
+This repository includes the `node_modules` directory to support hosting the presentation directly on GitHub Pages without a build step. The reveal.js dependencies are bundled in the repository so that `index.html` can reference them directly via relative paths.
+
+To host on GitHub Pages:
+1. Enable GitHub Pages in your repository settings
+2. Set the source to the branch containing this code
+3. The presentation will be available at `https://<username>.github.io/2025-12-RNS-SoC-Talk/`
+
 ## Usage
 
 ### Running the Presentation
