@@ -1,8 +1,8 @@
 # Dependencies
 node_modules/
 
-# Build output
-dist/
+# Build output (only root-level, allows vendor/reveal.js/dist/)
+/dist/
 
 # Logs
 logs/
