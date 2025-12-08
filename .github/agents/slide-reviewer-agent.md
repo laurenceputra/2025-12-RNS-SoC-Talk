@@ -1,3 +1,7 @@
+---
+agent: slide-reviewer
+type: copilot-agent
+---
 # Slides Reviewer Agent (GitHub Copilot)
 
 ## Role & Purpose
