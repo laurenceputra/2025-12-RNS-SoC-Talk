@@ -60,3 +60,25 @@ This project uses `npm test` which currently returns success without running spe
 
 - [reveal.js Documentation](https://revealjs.com/)
 - [reveal.js GitHub Repository](https://github.com/hakimel/reveal.js)
+
+## Copilot Agent Workflow (Slides Editor & Reviewer)
+
+This repo includes two GitHub Copilot agent instruction files under `.github/` that you can use as role-specific prompts for editing and reviewing slide content.
+
+- `.github/slide-editor-agent.md` — instructions for the Slides Editor Agent (edit slides directly in `index.html`, add notes, keep bullets concise, inject light humor when appropriate).
+- `.github/slide-reviewer-agent.md` — instructions for the Slides Reviewer Agent (industry-focused reviewer that checks tone, accuracy, clarity, and inclusive humor).
+
+How to trigger these agents via Copilot:
+1. Open `index.html` and the relevant slide `<section>` you want to update.
+2. Open your GitHub Copilot chat or in-editor prompt and include a short trigger line followed by the role file path. Example prompts:
+	- "Act as the Slides Editor Agent — follow `.github/slide-editor-agent.md` and propose a revised slide for `index.html` section with id='<your-id>'"
+	- "Act as the Slides Reviewer Agent — follow `.github/slide-reviewer-agent.md` and review this PR or the `index.html` diff; provide inline suggested edits"
+3. Follow the advice and suggested edits from Copilot; apply them to `index.html` and add `aside class='notes'` speaker guidance where helpful.
+
+Notes & Conventions
+- Use `slides:` prefix in commit messages for content changes (e.g., `slides: add 'Interview Prep Tips' slide`) and `chore:` for script/structure changes.
+- Keep humor concise: 1–2 short lines maximum, preferably held in notes rather than slide headlines.
+- If changes are structural (e.g., adding insertion markers or modifying scripts), split these into a separate PR and reference both PRs.
+- Reviewers should prefer the `index.html` single-source editing approach instead of editing generated content elsewhere (like `data/`), unless a generator is explicitly added.
+
+This workflow keeps Copilot usage within the native Copilot instruction context and avoids third-party automation for content generation. Use the two role files as the definitive guides for behavior and tone when prompting Copilot.
